@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AcadMeta Demo · Academia</title>
+  <meta name="description" content="AcadMeta Demo: academia fictícia para praticar design engineering de UI.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#topo" aria-label="AcadMeta Demo, início">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="18" height="18"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </span>
+        <span class="brand__name">AcadMeta <span>Demo</span></span>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#modalidades">Modalidades</a></li>
+          <li><a class="nav__link" href="#estrutura">Estrutura</a></li>
+          <li><a class="nav__link" href="#diferenciais">Diferenciais</a></li>
+        </ul>
+        <button class="btn btn--primary btn--sm" type="button" data-open-modal>Agendar aula</button>
+      </nav>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-mobile" aria-label="Abrir menu">
+        <span class="menu-toggle__line"></span>
+        <span class="menu-toggle__line"></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="menu-mobile" data-state="closed" hidden>
+      <ul class="mobile-menu__list">
+        <li><a class="mobile-menu__link" href="#modalidades">Modalidades</a></li>
+        <li><a class="mobile-menu__link" href="#estrutura">Estrutura</a></li>
+        <li><a class="mobile-menu__link" href="#diferenciais">Diferenciais</a></li>
+      </ul>
+      <button class="btn btn--primary btn--block" type="button" data-open-modal>Agendar aula experimental</button>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <div class="container hero__inner">
+        <p class="eyebrow">Treino orientado por profissionais e por dados</p>
+        <h1 class="hero__title">Resultado se constrói com método, não com sorte.</h1>
+        <p class="hero__subtitle">
+          Musculação, funcional, dança e HYROX com acompanhamento de educador físico
+          e nutricionista. Avaliação inicial, plano individual e evolução medida a cada mês.
+        </p>
+        <div class="hero__actions">
+          <button class="btn btn--primary" type="button" data-open-modal>Agendar aula experimental</button>
+          <a class="btn btn--secondary" href="#modalidades">Conhecer modalidades</a>
+        </div>
+
+        <div class="hero__meta">
+          <button class="link-button" type="button" id="hours-trigger" aria-expanded="false" aria-controls="hours-popover">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            Horário de funcionamento
+          </button>
+          <div class="popover" id="hours-popover" role="dialog" aria-label="Horário de funcionamento" data-state="closed" hidden>
+            <dl class="hours">
+              <div><dt>Seg a sex</dt><dd>05h – 23h</dd></div>
+              <div><dt>Sábado</dt><dd>07h – 18h</dd></div>
+              <div><dt>Domingo</dt><dd>08h – 13h</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALIDADES -->
+    <section class="section" id="modalidades" aria-labelledby="modalidades-titulo">
+      <div class="container">
+        <header class="section__header">
+          <p class="eyebrow">Modalidades</p>
+          <h2 class="section__title" id="modalidades-titulo">Quatro caminhos, um mesmo padrão de qualidade.</h2>
+        </header>
+
+        <ul class="cards" data-stagger>
+          <li class="card" style="--i: 0">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M3 9v6M6 7v10M18 7v10M21 9v6M6 12h12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            </span>
+            <h3 class="card__title">Musculação</h3>
+            <p class="card__text">Periodização individual, revisão de carga a cada ciclo e correção técnica em sala.</p>
+          </li>
+          <li class="card" style="--i: 1">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M4 12h3l2-6 4 12 2-6h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="card__title">Funcional</h3>
+            <p class="card__text">Força, mobilidade e condicionamento em turmas reduzidas de até 12 alunos.</p>
+          </li>
+          <li class="card" style="--i: 2">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="6.5" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="16.5" cy="16" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+            </span>
+            <h3 class="card__title">Dança</h3>
+            <p class="card__text">Aulas coreografadas para gasto calórico, coordenação e constância no treino.</p>
+          </li>
+          <li class="card" style="--i: 3">
+            <span class="card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="22" height="22"><path d="M13 3 5 14h6l-1 7 8-11h-6l1-7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+            </span>
+            <h3 class="card__title">HYROX</h3>
+            <p class="card__text">Preparação para a prova: corrida intercalada com estações, ritmo e estratégia.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ESTRUTURA (revelação com clip-path) -->
+    <section class="section section--tight" id="estrutura" aria-labelledby="estrutura-titulo">
+      <div class="container">
+        <figure class="reveal" data-reveal>
+          <div class="reveal__media" aria-hidden="true">
+            <svg class="reveal__art" viewBox="0 0 340 120">
+              <g fill="none" stroke="#9bc2b0" stroke-width="10" stroke-linecap="round" opacity="0.9">
+                <path d="M40 60H300"/>
+                <path d="M20 10V110M60 25V95M280 25V95M320 10V110"/>
+              </g>
+            </svg>
+          </div>
+          <figcaption class="reveal__caption">
+            <h2 class="reveal__title" id="estrutura-titulo">1.200 m² pensados para treinar bem.</h2>
+            <p class="reveal__text">Área livre de pesos, sala de funcional, estúdio de dança e pista para HYROX.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- DIFERENCIAIS (tooltips) -->
+    <section class="section" id="diferenciais" aria-labelledby="diferenciais-titulo">
+      <div class="container diferenciais">
+        <div>
+          <p class="eyebrow">Diferenciais</p>
+          <h2 class="section__title" id="diferenciais-titulo">O que vem junto com a matrícula.</h2>
+          <p class="section__text">Passe o mouse (ou navegue com Tab) pelos ícones para ver cada item.</p>
+        </div>
+
+        <ul class="perks" aria-label="Diferenciais da academia">
+          <li>
+            <button class="perk" type="button" aria-describedby="tip-avaliacao" data-tooltip-trigger>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M4 19h16M7 16V9M12 16V5M17 16v-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span class="sr-only">Avaliação física</span>
+            </button>
+            <span class="tooltip" role="tooltip" id="tip-avaliacao">Avaliação física mensal</span>
+          </li>
+          <li>
+            <button class="perk" type="button" aria-describedby="tip-nutri" data-tooltip-trigger>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M12 21c-4-2-7-5.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 4.5-3 8-7 10Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span class="sr-only">Nutrição</span>
+            </button>
+            <span class="tooltip" role="tooltip" id="tip-nutri">Consulta com nutricionista</span>
+          </li>
+          <li>
+            <button class="perk" type="button" aria-describedby="tip-app" data-tooltip-trigger>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M11 18h2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span class="sr-only">Aplicativo</span>
+            </button>
+            <span class="tooltip" role="tooltip" id="tip-app">Treino e evolução no app</span>
+          </li>
+          <li>
+            <button class="perk" type="button" aria-describedby="tip-estac" data-tooltip-trigger>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 16V8h3a2.5 2.5 0 0 1 0 5h-3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span class="sr-only">Estacionamento</span>
+            </button>
+            <span class="tooltip" role="tooltip" id="tip-estac">Estacionamento gratuito</span>
+          </li>
+          <li>
+            <button class="perk" type="button" aria-describedby="tip-vest" data-tooltip-trigger>
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path d="M7 4h10v16H7z M12 4v16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span class="sr-only">Vestiário</span>
+            </button>
+            <span class="tooltip" role="tooltip" id="tip-vest">Vestiário com armários</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+      <div class="container cta__inner">
+        <h2 class="cta__title">A primeira aula é por nossa conta.</h2>
+        <button class="btn btn--primary" type="button" data-open-modal>Agendar aula experimental</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2026 AcadMeta Demo. Projeto fictício para estudo de UI.</p>
+      <p>Rua Exemplo, 123 · Centro · (00) 0000-0000</p>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <dialog class="modal" id="modal-agendar" aria-labelledby="modal-titulo" data-state="closed">
+    <div class="modal__panel">
+      <header class="modal__header">
+        <h2 class="modal__title" id="modal-titulo">Agendar aula experimental</h2>
+        <button class="icon-button" type="button" data-close-modal aria-label="Fechar">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+        </button>
+      </header>
+
+      <form class="form" id="form-agendar" novalidate>
+        <div class="field">
+          <label for="f-nome">Nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="f-whats">WhatsApp</label>
+          <input id="f-whats" name="whats" type="tel" autocomplete="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+        </div>
+        <div class="field">
+          <label for="f-mod">Modalidade</label>
+          <select id="f-mod" name="modalidade" required>
+            <option value="">Selecione</option>
+            <option>Musculação</option>
+            <option>Funcional</option>
+            <option>Dança</option>
+            <option>HYROX</option>
+          </select>
+        </div>
+        <p class="form__error" id="form-error" aria-live="polite"></p>
+        <div class="form__actions">
+          <button class="btn btn--secondary" type="button" data-close-modal>Cancelar</button>
+          <button class="btn btn--primary" type="submit">Confirmar</button>
+        </div>
+      </form>
+
+      <div class="success" id="form-success" hidden>
+        <p class="success__title">Pronto! Recebemos seu pedido.</p>
+        <p class="success__text">Nossa equipe vai chamar você no WhatsApp para confirmar o horário.</p>
+        <button class="btn btn--primary btn--block" type="button" data-close-modal>Fechar</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
